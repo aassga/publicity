@@ -489,7 +489,7 @@ export default {
       padding: 20px 100px;
       font-weight: 300;
       font-size: 18px;
-      top: 9px;
+      top: 0;
       z-index: 2;
       &>span {
         font-size: 1.2em;

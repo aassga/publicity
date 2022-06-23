@@ -1,6 +1,6 @@
 {
-  "string_title": "Hichat-安全隱密通訊的軟體",
-  "string_headline": "Hichat",
+  "string_title": "嗨聊-安全隱密通訊的軟體",
+  "string_headline": "嗨聊",
   "string_desc": "安全隱密通訊的軟體",
   "string_app_apk": "Andorid",
   "string_app_ios": "Browser",
@@ -23,9 +23,9 @@
   "string_qr_block_4_1": "文字、表情及語音 更有效的訊息傳遞",
   "string_qr_block_5": "立即下載",
   "string_qr_block_5_1": "為你串起生活大小事的通訊軟件",
-  "string_copyright": "Copyright © Hichat 版權所有",
+  "string_copyright": "Copyright © 嗨聊 版權所有",
   "string_privacyPolicy": "隱私權政策",
   "string_userAgreement": "服務條款",
-  "string_userAgreement_title": "Hichat 通訊應用程序服務 服務條款",
-  "string_privacyPolicy_title": "Hichat 通訊應用程序服務 隱私權政策"
+  "string_userAgreement_title": "嗨聊 通訊應用程序服務 服務條款",
+  "string_privacyPolicy_title": "嗨聊 通訊應用程序服務 隱私權政策"
 }
