@@ -60,7 +60,7 @@ export default {
     }, {
       passive: false
     });
-    this.getUserLang()
+    // this.getUserLang()
   },
   destroyed() {
     window.removeEventListener('mousewheel', function(){})

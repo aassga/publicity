@@ -92,6 +92,11 @@ import { Register, GetAuthCode } from '@/api/signup'
 export default {
   data () {
     return {
+      setting: {
+        title: this.$t("string_title"),
+        keywords: this.$t("string_title"),
+        description: this.$t("string_desc"),
+      },
       password_visivble: false,
       confirm_password_visible: false,
       agentId: 0,
@@ -128,6 +133,15 @@ export default {
         centered: true
       }
     }
+  },
+  metaInfo() {
+    return {
+      title: this.setting.title,
+      meta: [
+        { name: "Keywords", content: this.setting.keywords },
+        { name: "Description", content: this.setting.description },
+      ],
+    };
   },
   mounted () {
     let fullPath = this.$route.fullPath
