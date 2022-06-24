@@ -25,7 +25,7 @@
           <img class="string_app_google_img" src="@/assets/icon/btn-googleplay.png" alt="">
         </div>
       </a> -->
-      <a href="https://apk.hichat.info/download/Hailiao_2022-06-21_v1.4.0-release.apk" target="_blank">
+      <a href="https://apk.hichat.info/download/Hailiao_2022-06-24_v1.4.0-release.apk" target="_blank">
         <div class="download-btn">
           <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="">
         </div>
@@ -105,7 +105,7 @@
             <img class="string_app_google_img" src="@/assets/icon/btn-googleplay.png" alt="">
           </div>
         </a> -->
-        <a href="https://apk.hichat.info/download/Hailiao_2022-06-21_v1.4.0-release.apk" target="_blank">
+        <a href="https://apk.hichat.info/download/Hailiao_2022-06-24_v1.4.0-release.apk" target="_blank">
           <div class="download-btn">
             <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="">
           </div>

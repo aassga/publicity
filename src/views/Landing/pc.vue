@@ -28,13 +28,13 @@
             </a>
           </div> -->
           <div class="download-area">
-            <a href="https://apk.hichat.info/download/Hailiao_2022-06-21_v1.4.0-release.apk" target="_blank">
+            <a href="https://apk.hichat.info/download/Hailiao_2022-06-24_v1.4.0-release.apk" target="_blank">
               <div class="download-btn">
                 <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="" style="height:60px;margin:0;">
               </div>
               <div class="download-qr">
                 <span class="triangle"></span>
-                <img src="@/assets/qr-google.png" alt="">
+                <img src="@/assets/qr.png" alt="">
                 <p class="string_qr_download">{{ $t("string_qr_download") }}</p>
               </div>
             </a>
@@ -174,7 +174,7 @@
         <p class="string_qr_block_5 sub-title-horizon">{{ $t("string_qr_block_5") }}</p>
         <p class="string_qr_block_5_1 thi-title">{{ $t("string_qr_block_5_1") }}</p>
         <!-- <div class="download-area">
-          <a href="https://apk.hichat.info/download/Hailiao_2022-06-21_v1.4.0-release.apk" target="_blank">
+          <a href="https://apk.hichat.info/download/Hailiao_2022-06-24_v1.4.0-release.apk" target="_blank">
             <div class="download-btn">
               <img 
                 class="string_app_google_img" 
@@ -190,7 +190,7 @@
           </a>
         </div> -->
         <div class="download-area">
-          <a href="https://apk.hichat.info/download/Hailiao_2022-06-21_v1.4.0-release.apk" target="_blank">
+          <a href="https://apk.hichat.info/download/Hailiao_2022-06-24_v1.4.0-release.apk" target="_blank">
             <div class="download-btn">
               <img 
                 class="string_app_android_img" 
@@ -200,7 +200,7 @@
             </div>
             <div class="download-qr">
               <span class="triangle"></span>
-              <img src="@/assets/qr-google.png" alt="">
+              <img src="@/assets/qr.png" alt="">
               <p class="string_qr_download">{{ $t("string_qr_download") }}</p>
             </div>
           </a>
