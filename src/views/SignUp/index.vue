@@ -19,9 +19,10 @@
               <label>登录密码</label>
               <input 
                 :type="password_visivble ? 'text' : 'password'"
-                 v-model="params.password"
-                 autocomplete
-                 @blur="handleValid('password')" />
+                v-model="params.password"
+                autocomplete
+                maxlength = "12"
+                @blur="handleValid('password')" />
               <div class="eye-btn" @click="handlePswVisible('password')">
                 <img :src="require(`@/assets/signup/eye${!password_visivble ? '-off' : ''}.png`)">
               </div>
@@ -33,9 +34,10 @@
               <label>确认密码</label>
               <input 
                 :type="confirm_password_visible ? 'text' : 'password'"
-                 v-model="params.confirm_password"
-                 autocomplete
-                 @blur="handleValid('confirm_password')" />
+                v-model="params.confirm_password"
+                autocomplete
+                maxlength = "12"
+                @blur="handleValid('confirm_password')" />
               <div class="eye-btn" @click="handlePswVisible('confirm_password')">
                 <img :src="require(`@/assets/signup/eye${!confirm_password_visible ? '-off' : ''}.png`)">
               </div>
@@ -48,7 +50,8 @@
               <label>帐号 ID</label>
               <input 
                 type="text" 
-                v-model="params.username" 
+                v-model="params.username"
+                maxlength = "18" 
                 @blur="handleValid('username')" />
             </div>
             <p class="error" v-show="error.username">{{error.username}}</p>
@@ -357,7 +360,6 @@ export default {
           }).catch(err => {})
         })
       }
-      
     }
   }
 }
