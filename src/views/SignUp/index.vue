@@ -89,6 +89,8 @@
 <script>
 import { encryp, decrypt } from '@/utils/crypto'
 import { Register, GetAuthCode } from '@/api/signup'
+import resStatus from '@/constants/resStatus'
+
 export default {
   data () {
     return {
@@ -300,12 +302,13 @@ export default {
           forRegister: true
         }
         GetAuthCode(params).then(res => {
+          let msg = resStatus[res.code] || res.message
           if (res.code == 200) {
             this.countDownTimer()
+            msg = '验证码已发送'
           } else {
             this.authCodeDisable = false
           }
-          let msg = res.message
           this.$bvModal.msgBoxOk(msg, this.modalOption).then(value => {
           }).catch(err => {})
         })
@@ -336,7 +339,7 @@ export default {
         let password_encode = encryp(params.password)
         params.password = password_encode
         Register(params).then(res => {
-          let msg = res.message
+          let msg = resStatus[res.code] || res.message
           let success = res.code == 200
           if (success) {
             this.modalOption.okTitle = '前往下载'
