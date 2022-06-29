@@ -41,7 +41,7 @@
               </div>
             </div>
             <p class="error" v-show="error.confirm_password">{{error.confirm_password}}</p>
-            <span class="form-tip">密码长度为6至12个字元，至少包括1个大写、1个小写英文及1个数字。</span>
+            <span class="form-tip">密码长度为4至12个字元。</span>
           </li>
           <li class="id">
              <div :class="{'valid-error':error.username}">
@@ -227,7 +227,7 @@ export default {
     },
     checkPassword (name) {
       let password = this.params[name]
-      let myreg = /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])/
+      // let myreg = /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])/
       this.canSubmit = false
       if (password == '') {
         if (name == 'confirm_password') {
@@ -239,16 +239,17 @@ export default {
       } else if (name == 'confirm_password' && password !== this.params.password) {
         this.error[name] = '请检查并确认您输入的密码是否一致'
         return
-      } else if (password.length < 6 || password.length > 12) {
-        this.error[name] = '密码长度为6至12个字元'
-        return
-      } else if (!myreg.test(password)) {
-        this.error[name] = '密码至少包括1个大写、1个小写英文及1个数字'
+      } else if (password.length < 4 || password.length > 12) {
+        this.error[name] = '密码长度为4至12个字元'
         return
       } else {
         this.error[name] = ''
         this.canSubmit = true
       }
+      // else if (!myreg.test(password)) {
+      //   this.error[name] = '密码至少包括1个大写、1个小写英文及1个数字'
+      //   return
+      // } 
     },
     checkUsername () {
       let username = this.params.username
