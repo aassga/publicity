@@ -14,6 +14,7 @@ module.exports = defineConfig({
         changeOrigin: true,
     }}
   },
+  filenameHashing: false,
   pluginOptions: {
     i18n: {
       locale: 'en',

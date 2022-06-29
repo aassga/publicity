@@ -293,6 +293,9 @@ export default {
       }
     },
     getAuthCode () {
+      if (this.authCodeDisable) {
+        return
+      }
       if(!this.params.phone) {
         this.isPhone()
       } else {
@@ -552,6 +555,9 @@ $base: 16;
           color: $text-gray;
           border: solid 1px $text-gray;
           cursor: not-allowed;
+          &:hover {
+            background-color: transparent;
+          }
         }
       }
     }
