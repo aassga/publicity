@@ -20,12 +20,7 @@
     </div>
     <p class="string_desc">{{ $t("string_desc") }}</p>
     <div class="pad-air-style">
-      <!-- <a href="https://play.google.com/store/apps/details?id=com.py.hichat" target="_blank">
-        <div class="download-btn">
-          <img class="string_app_google_img" src="@/assets/icon/btn-googleplay.png" alt="">
-        </div>
-      </a> -->
-      <a href="https://apk.hichat.info/download/Hailiao_2022-06-30_v1.4.0-release.apk" target="_blank">
+      <a :href="apk_link" target="_blank">
         <div class="download-btn">
           <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="">
         </div>
@@ -100,12 +95,7 @@
 
     <div class="pad-air-style h5-bottom">
       <div class="wrap-h5-footer">
-        <!-- <a href="https://play.google.com/store/apps/details?id=com.py.hichat" target="_blank">
-          <div class="download-btn">
-            <img class="string_app_google_img" src="@/assets/icon/btn-googleplay.png" alt="">
-          </div>
-        </a> -->
-        <a href="https://apk.hichat.info/download/Hailiao_2022-06-30_v1.4.0-release.apk" target="_blank">
+        <a :href="apk_link" target="_blank">
           <div class="download-btn">
             <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="">
           </div>
@@ -132,6 +122,7 @@
 import mvArea from '@/components/mvArea.vue'
 import Dropdown from '@/components/dropdown.vue'
 import Brand from '@/components/brand.vue'
+import apkLink from '@/constants/apkLink'
 export default {
   components: {
     mvArea,
@@ -279,6 +270,11 @@ export default {
       })
       this.$scrollmagic.addScene(scene14)
     })
+  },
+  computed: {
+    apk_link () {
+      return apkLink
+    }
   },
   methods: {
     goWebPage() {

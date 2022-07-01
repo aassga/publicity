@@ -11,24 +11,8 @@
           <div class="string_kebord">
             <p class="string_desc">{{ $t("string_desc") }}</p>
           </div>
-          <!-- <div class="download-area">
-            <a href="https://play.google.com/store/apps/details?id=com.py.hichat" target="_blank">
-              <div class="download-btn">
-                <img 
-                  class="string_app_google_img" 
-                  src="@/assets/icon/btn-googleplay.png" 
-                  alt="" 
-                  style="height:60px;margin:0;">
-              </div>
-              <div class="download-qr-googleplay">
-                <span class="triangle"></span>
-                <img src="@/assets/qr-google.png" alt="">
-                <p class="string_qr_download">{{ $t("string_qr_download") }}</p>
-              </div>
-            </a>
-          </div> -->
           <div class="download-area">
-            <a href="https://apk.hichat.info/download/Hailiao_2022-06-30_v1.4.0-release.apk" target="_blank">
+            <a :href="apk_link" target="_blank">
               <div class="download-btn">
                 <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="" style="height:60px;margin:0;">
               </div>
@@ -173,24 +157,8 @@
       <div class="unit-right">
         <p class="string_qr_block_5 sub-title-horizon">{{ $t("string_qr_block_5") }}</p>
         <p class="string_qr_block_5_1 thi-title">{{ $t("string_qr_block_5_1") }}</p>
-        <!-- <div class="download-area">
-          <a href="https://apk.hichat.info/download/Hailiao_2022-06-30_v1.4.0-release.apk" target="_blank">
-            <div class="download-btn">
-              <img 
-                class="string_app_google_img" 
-                src="@/assets/icon/btn-googleplay.png" 
-                alt="" 
-                style="height: 60px; margin: 0; position: relative;">
-            </div>
-            <div class="download-qr-googleplay">
-              <span class="triangle"></span>
-              <img src="@/assets/qr-google.png" alt="">
-              <p class="string_qr_download">{{ $t("string_qr_download") }}</p>
-            </div>
-          </a>
-        </div> -->
         <div class="download-area">
-          <a href="https://apk.hichat.info/download/Hailiao_2022-06-30_v1.4.0-release.apk" target="_blank">
+          <a :href="apk_link" target="_blank">
             <div class="download-btn">
               <img 
                 class="string_app_android_img" 
@@ -236,11 +204,17 @@
 import mvArea from '@/components/mvArea.vue'
 import Dropdown from '@/components/dropdown.vue'
 import Brand from '@/components/brand.vue'
+import apkLink from '@/constants/apkLink'
 export default {
   components: {
     mvArea,
     Dropdown,
     Brand
+  },
+  computed: {
+    apk_link () {
+      return apkLink
+    }
   },
   methods: {
     goWebPage() {
