@@ -19,6 +19,7 @@
     "vue-i18n": "^8.9.0",
     "vue-meta": "^2.4.0",
     "vue-plugin-load-script": "^2.1.1",
+    "vue-qrcode": "^2.0.0",
     "vue-router": "^3.5.1",
     "vue-scrollmagic": "^1.2.0"
   },

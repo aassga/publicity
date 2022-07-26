@@ -1,18 +1,23 @@
 import Landing from '@/views/Landing'
-import Agreement from '@/views/Agreement'
-import Privacy from '@/views/Privacy'
 import SignUp from '@/views/SignUp'
+// import Agreement from '@/views/Agreement'
+// import Privacy from '@/views/Privacy'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    redirect: 'signUp'
+    redirect: 'landing'
   },
   {
     path: '/landing',
     name: 'Landing',
     component: Landing,
+  },
+  {
+    path: '/signUp',
+    name: 'SignUp',
+    component: SignUp
   },
   // {
   //   path: '/userAgreement',
@@ -24,11 +29,6 @@ const routes = [
   //   name: 'privacyPolicy',
   //   component: Privacy
   // },
-  {
-    path: '/signUp',
-    name: 'signUp',
-    component: SignUp
-  }
 ]
 
 export default routes
