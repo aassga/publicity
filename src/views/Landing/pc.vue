@@ -12,13 +12,27 @@
             <p class="string_desc">{{ $t("string_desc") }}</p>
           </div>
           <div class="download-area">
+            <a :href="appstore_link" target="_blank">
+              <div class="download-btn">
+                <img class="string_app_appstore_img" src="@/assets/icon/btn-appstore.png" alt="" style="height:60px;margin:0;">
+              </div>
+              <div class="download-qr" v-if="appstore_link">
+                <span class="triangle"></span>
+                <!-- <img src="@/assets/qr.png" alt=""> -->
+                <vue-qr :text="appstore_link" :size="500" :margin="10"></vue-qr>
+                <p class="string_qr_download">{{ $t("string_qr_download") }}</p>
+              </div>
+            </a>
+          </div>
+          <div class="download-area">
             <a :href="apk_link" target="_blank">
               <div class="download-btn">
                 <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="" style="height:60px;margin:0;">
               </div>
-              <div class="download-qr">
+              <div class="download-qr" v-if="apk_link">
                 <span class="triangle"></span>
-                <img src="@/assets/qr.png" alt="">
+                <!-- <img src="@/assets/qr.png" alt=""> -->
+                <vue-qr :text="apk_link" :size="500" :margin="10"></vue-qr>
                 <p class="string_qr_download">{{ $t("string_qr_download") }}</p>
               </div>
             </a>
@@ -158,6 +172,23 @@
         <p class="string_qr_block_5 sub-title-horizon">{{ $t("string_qr_block_5") }}</p>
         <p class="string_qr_block_5_1 thi-title">{{ $t("string_qr_block_5_1") }}</p>
         <div class="download-area">
+          <a :href="appstore_link" target="_blank">
+            <div class="download-btn">
+              <img 
+                class="string_app_appstore_img" 
+                src="@/assets/icon/btn-appstore.png" 
+                alt="" 
+                style="height: 60px; margin: 0; position: relative;">
+            </div>
+            <div class="download-qr" v-if="appstore_link">
+              <span class="triangle"></span>
+              <!-- <img src="@/assets/qr.png" alt=""> -->
+              <vue-qr :text="appstore_link" :size="500" :margin="10"></vue-qr>
+              <p class="string_qr_download">{{ $t("string_qr_download") }}</p>
+            </div>
+          </a>
+        </div>
+        <div class="download-area">
           <a :href="apk_link" target="_blank">
             <div class="download-btn">
               <img 
@@ -166,9 +197,10 @@
                 alt="" 
                 style="height: 60px; margin: 0; position: relative;">
             </div>
-            <div class="download-qr">
+            <div class="download-qr" v-if="apk_link">
               <span class="triangle"></span>
-              <img src="@/assets/qr.png" alt="">
+              <!-- <img src="@/assets/qr.png" alt=""> -->
+              <vue-qr :text="apk_link" :size="500" :margin="10"></vue-qr>
               <p class="string_qr_download">{{ $t("string_qr_download") }}</p>
             </div>
           </a>
@@ -204,16 +236,23 @@
 import mvArea from '@/components/mvArea.vue'
 import Dropdown from '@/components/dropdown.vue'
 import Brand from '@/components/brand.vue'
-import apkLink from '@/constants/apkLink'
+import appstoreLink from '@/constants/appstoreLink'
+import VueQr from 'vue-qr'
+
 export default {
+  props: ['apkLink'],
   components: {
     mvArea,
     Dropdown,
-    Brand
+    Brand,
+    VueQr
   },
   computed: {
     apk_link () {
-      return apkLink
+      return this.apkLink
+    },
+    appstore_link () {
+      return appstoreLink
     }
   },
   methods: {

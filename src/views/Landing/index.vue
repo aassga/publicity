@@ -1,13 +1,15 @@
 <template>
   <div>
-    <H5 v-show="showMobile" />
-    <PC v-show="showPC" />
+    <H5 v-if="showMobile" :apkLink="apk_url" />
+    <PC v-if="showPC" :apkLink="apk_url" />
   </div>
 </template>
 
 <script>
 import { handleCookie } from '@/utils/cookie'
+import { setLocalDefault, getLocal } from '@/utils/storage'
 import { loadProperties, getNavLanguage } from '@/utils/i18n'
+import { GetAndroidVersion } from '@/api/download'
 import H5 from './h5.vue'
 import PC from './pc.vue'
 
@@ -26,6 +28,7 @@ export default {
         keywords: this.$t("string_title"),
         description: this.$t("string_desc"),
       },
+      apk_url: ''
     };
   },
   metaInfo() {
@@ -38,6 +41,7 @@ export default {
     };
   },
   mounted() {
+    this.getAndroidVersion()
     if (window.innerWidth < 820) {
       this.showMobile = true
       this.showPC = false
@@ -93,6 +97,16 @@ export default {
       }
       // loadProperties(i18nLanguage)
       this.$root.$i18n.locale = i18nLanguage
+    },
+    getAndroidVersion () {
+      GetAndroidVersion().then(res => {
+        if (res.code == 200) {
+          this.apk_url = res.data.apkUrlHailiao
+          setLocalDefault('apk_url', res.data.apkUrlHailiao)
+        } else {
+          this.apk_url = getLocal('apk_url')
+        }
+      })
     }
   }
 }

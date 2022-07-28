@@ -20,6 +20,11 @@
     </div>
     <p class="string_desc">{{ $t("string_desc") }}</p>
     <div class="pad-air-style">
+      <a :href="appstore_link" target="_blank">
+        <div class="download-btn">
+          <img class="string_app_appstore_img" src="@/assets/icon/btn-appstore.png" alt="">
+        </div>
+      </a>
       <a :href="apk_link" target="_blank">
         <div class="download-btn">
           <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="">
@@ -95,6 +100,11 @@
 
     <div class="pad-air-style h5-bottom">
       <div class="wrap-h5-footer">
+        <a :href="appstore_link" target="_blank">
+        <div class="download-btn">
+          <img class="string_app_appstore_img" src="@/assets/icon/btn-appstore.png" alt="">
+        </div>
+      </a>
         <a :href="apk_link" target="_blank">
           <div class="download-btn">
             <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="">
@@ -122,8 +132,9 @@
 import mvArea from '@/components/mvArea.vue'
 import Dropdown from '@/components/dropdown.vue'
 import Brand from '@/components/brand.vue'
-import apkLink from '@/constants/apkLink'
+import appstoreLink from '@/constants/appstoreLink'
 export default {
+  props: ['apkLink'],
   components: {
     mvArea,
     Dropdown,
@@ -273,7 +284,10 @@ export default {
   },
   computed: {
     apk_link () {
-      return apkLink
+      return this.apkLink
+    },
+    appstore_link () {
+      return appstoreLink
     }
   },
   methods: {
@@ -336,7 +350,7 @@ export default {
       text-align: left;
       color: #000;
       vertical-align: top;
-      margin: 2em 0.5em 0 0;
+      margin: 1.2em 0.5em 0 0;
       background: none;
       padding: 0;
       cursor: pointer;
