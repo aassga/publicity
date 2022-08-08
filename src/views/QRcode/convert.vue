@@ -12,7 +12,7 @@ export default {
   data () {
     return {
       apk_url: "",
-      convertText:"轉導回首頁中...."
+      convertText:"转导回首页中...."
     }
   },
   mounted() {
@@ -29,7 +29,7 @@ export default {
       } else if (iOS == true) {
         document.location.href = appstoreLink;
       } else {
-        alert('您目前非行動裝置')
+        alert('您目前非行动装置')
         setTimeout(() => {
           this.$router.push({name: 'Landing'})
         }, 1500);
