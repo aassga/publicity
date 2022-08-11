@@ -59,7 +59,7 @@ var getNavLanguage = function () {
 /* 设置语言类型： 默认为中文 */
 var i18nLanguage = "zh-CN";
 /* 设置一下网站支持的语言种类 */
-var webLanguage = ['en-US', 'en', 'zh-CN', 'zh-TW'];
+var webLanguage = ['en-US', 'en', 'zh-CN', 'zh-TW','zh'];
 
 
 var LANGUAGE_CODE = "zh-CN"; //标识语言
@@ -95,7 +95,7 @@ function loadProperties(type) {
 
     $('.string_privacyPolicy').removeAttr("style")
     $('.string_userAgreement').removeAttr("style")
-    if (type === 'zh-TW') {
+    if (type === 'zh-TW' || type === 'zh') {
       $(".string_app_google_img").attr("src", './static/img/icon/btn-googleplay-tc.png');
       $(".string_app_android_img").attr("src", './static/img/icon/btn-android-tc.png');
       $(".string_app_browser_img").attr("src", './static/img/icon/btn-browser-tc.png');
@@ -158,13 +158,18 @@ function switchLang(LANGUAGE_CODE) {
 $(document).ready(function () {
   /* 获取用户浏览器设备之前选择过的语言类型 */
   if (getCookie("Language")) {
+    console.log(123)
     i18nLanguage = getCookie("Language");
   } else {
     // 获取浏览器语言
     var navLanguage = getNavLanguage();
     if (navLanguage) {
+
+      console.log(navLanguage)
+
       // 判断是否在网站支持语言数组里
       var charSize = $.inArray(navLanguage, webLanguage);
+
       if (charSize > -1) {
         i18nLanguage = navLanguage;
         getCookie("Language", navLanguage, {       // 存到缓存中
