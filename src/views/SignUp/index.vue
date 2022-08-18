@@ -3,7 +3,7 @@
     <div class="signup-wrapper">
       <div class="brand">
         <!-- <img src="@/assets/brand.png"> -->
-        <h3>註册</h3>
+        <h3>注册</h3>
       </div>
       <form class="form">
         <ul>
@@ -55,7 +55,7 @@
                 @blur="handleValid('username')" />
             </div>
             <p class="error" v-show="error.username">{{error.username}}</p>
-            <span class="form-tip">ID长度为5至18个字元，可混用英文字母、数字和底线。註册后即无法变更。</span>
+            <span class="form-tip">ID长度为5至18个字元，可混用英文字母、数字和底线。注册后即无法变更。</span>
           </li>
           <li class="nickname">
             <div :class="{'valid-error':error.nickname}">
