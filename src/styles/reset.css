@@ -1,0 +1,106 @@
+@charset "utf-8";
+/*!
+ * @功能：重設瀏覽器預設樣式
+ */
+html {
+  background: white;
+  color: black;
+}
+
+/* 內外邊距通常讓各個瀏覽器樣式的表現位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,label {
+  margin: 0;
+  padding: 0;
+}
+
+/* 要注意表單元素並不繼承父級 font 的問題 */
+body,button,input,select,textarea {
+  font: 12px \5b8b\4f53,arial,sans-serif;
+}
+input,select,textarea {
+  font-size: 100%;
+}
+
+/* 去掉 table cell 的邊距並讓其邊重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ie bug：th 不繼承 text-align */
+th {
+  text-align: inherit;
+}
+
+/* 去除預設邊框 */
+fieldset,img {
+  border: none;
+}
+
+/* ie6 7 8(q) bug 顯示為行內表現 */
+iframe {
+  display: block;
+}
+
+/* 去掉 firefox 下此元素的邊框 */
+abbr,acronym {
+  border: none;
+  font-variant: normal;
+}
+
+/* 一致的 del 樣式 */
+del {
+  text-decoration: line-through;
+}
+address,caption,cite,code,dfn,em,th,var {
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* 去掉列表前的標識，li 會繼承 */
+ol,ul {
+  list-style: none;
+}
+
+/* 對齊是排版最重要的因素，別讓什麼都居中 */
+caption,th {
+  text-align: left;
+}
+
+/* 來自yahoo，讓標題都自定義，適應多個系統應用 */
+h1,h2,h3,h4,h5,h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+q:before,q:after {
+  content: '';
+}
+
+/* 統一上標和下標 */
+sub,sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+/* 讓連結在 hover 狀態下顯示下*劃線啥都沒有 */
+a:hover {
+  text-decoration: none;
+}
+
+/* 預設不顯示下劃線，保持頁面簡潔 */
+ins,a {
+    text-decoration: none;
+}
+
+/* 去除 ie6 & ie7 焦點點狀線 */
+a:focus,*:focus {
+    outline: none;
+}
