@@ -225,8 +225,8 @@
         <img class="logo-footer" src="@/assets/brand-footer.png" alt="">
         <img class="logo-footer-text" src="@/assets/logotext.png" alt="">
       </div>
-      <!-- <router-link to="userAgreement" class="string_userAgreement">{{ $t("string_userAgreement") }}</router-link>
-      <router-link to="privacyPolicy" class="string_privacyPolicy">{{ $t("string_privacyPolicy") }}</router-link> -->
+      <router-link to="userAgreement" class="string_userAgreement">{{ $t("string_userAgreement") }}</router-link>
+      <router-link to="privacyPolicy" class="string_privacyPolicy">{{ $t("string_privacyPolicy") }}</router-link>
       <div class="string_copyright">{{ $t("string_copyright") }}</div>
     </div>
   </div>

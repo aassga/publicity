@@ -2,8 +2,8 @@ import Landing from '@/views/Landing'
 import SignUp from '@/views/SignUp'
 import QRcode from '@/views/QRcode'
 import convert from '@/views/QRcode/convert'
-// import Agreement from '@/views/Agreement'
-// import Privacy from '@/views/Privacy'
+import Agreement from '@/views/Agreement'
+import Privacy from '@/views/Privacy'
 
 const routes = [
   {
@@ -31,16 +31,16 @@ const routes = [
     name: "convert",
     component: convert,
   },
-  // {
-  //   path: '/userAgreement',
-  //   name: 'userAgreement',
-  //   component: Agreement
-  // },
-  // {
-  //   path: '/privacyPolicy',
-  //   name: 'privacyPolicy',
-  //   component: Privacy
-  // },
+  {
+    path: '/userAgreement',
+    name: 'userAgreement',
+    component: Agreement
+  },
+  {
+    path: '/privacyPolicy',
+    name: 'privacyPolicy',
+    component: Privacy
+  },
 ]
 
 export default routes
