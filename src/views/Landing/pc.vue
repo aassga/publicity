@@ -11,26 +11,26 @@
           <div class="string_kebord">
             <p class="string_desc">{{ $t("string_desc") }}</p>
           </div>
-          <!-- <div class="download-area">
-            <a href="https://play.google.com/store/apps/details?id=com.py.hichat" target="_blank">
+          <div class="download-area">
+            <a href="https://apps.apple.com/app/%E5%97%A8%E8%81%8A-hailiao/id1639310456" target="_blank">
               <div class="download-btn">
                 <img 
                   class="string_app_google_img" 
-                  src="@/assets/icon/btn-googleplay.png" 
+                  src="@/assets/icon/btn-ios-black.png" 
                   alt="" 
                   style="height:60px;margin:0;">
               </div>
               <div class="download-qr-googleplay">
                 <span class="triangle"></span>
-                <img src="@/assets/qr-google.png" alt="">
+                <img src="@/assets/qr-ios.png" alt="">
                 <p class="string_qr_download">{{ $t("string_qr_download") }}</p>
               </div>
             </a>
-          </div> -->
+          </div>
           <div class="download-area">
             <a href="https://apk.hichat.info/download/Hailiao_2022-06-21_v1.4.0-release.apk" target="_blank">
               <div class="download-btn">
-                <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="" style="height:60px;margin:0;">
+                <img class="string_app_android_img" src="@/assets/icon/btn-android-black.png" alt="" style="height:60px;margin:0;">
               </div>
               <div class="download-qr">
                 <span class="triangle"></span>
@@ -44,7 +44,7 @@
               <div class="download-btn">
                 <img 
                   class="string_app_browser_img" 
-                  src="@/assets/icon/btn-browser.png" 
+                  src="@/assets/icon/btn-browser-black.png" 
                   alt="" 
                   style="height:60px;margin:0;">
               </div>
@@ -173,28 +173,28 @@
       <div class="unit-right">
         <p class="string_qr_block_5 sub-title-horizon">{{ $t("string_qr_block_5") }}</p>
         <p class="string_qr_block_5_1 thi-title">{{ $t("string_qr_block_5_1") }}</p>
-        <!-- <div class="download-area">
-          <a href="https://apk.hichat.info/download/Hailiao_2022-06-21_v1.4.0-release.apk" target="_blank">
+        <div class="download-area">
+          <a href="https://apps.apple.com/app/%E5%97%A8%E8%81%8A-hailiao/id1639310456" target="_blank">
             <div class="download-btn">
               <img 
                 class="string_app_google_img" 
-                src="@/assets/icon/btn-googleplay.png" 
+                src="@/assets/icon/btn-ios-black.png" 
                 alt="" 
                 style="height: 60px; margin: 0; position: relative;">
             </div>
             <div class="download-qr-googleplay">
               <span class="triangle"></span>
-              <img src="@/assets/qr-google.png" alt="">
+              <img src="@/assets/qr-ios.png" alt="">
               <p class="string_qr_download">{{ $t("string_qr_download") }}</p>
             </div>
           </a>
-        </div> -->
+        </div>
         <div class="download-area">
           <a href="https://apk.hichat.info/download/Hailiao_2022-06-21_v1.4.0-release.apk" target="_blank">
             <div class="download-btn">
               <img 
                 class="string_app_android_img" 
-                src="@/assets/icon/btn-android.png" 
+                src="@/assets/icon/btn-android-black.png" 
                 alt="" 
                 style="height: 60px; margin: 0; position: relative;">
             </div>
@@ -210,7 +210,7 @@
             <div class="download-btn">
               <img 
                 class="string_app_browser_img" 
-                src="@/assets/icon/btn-browser.png" 
+                src="@/assets/icon/btn-browser-black.png" 
                 alt="" 
                 style="height: 60px; margin: 0; position: relative;">
             </div>
@@ -225,8 +225,8 @@
         <img class="logo-footer" src="@/assets/brand-footer.png" alt="">
         <img class="logo-footer-text" src="@/assets/logotext.png" alt="">
       </div>
-      <!-- <router-link to="userAgreement" class="string_userAgreement">{{ $t("string_userAgreement") }}</router-link>
-      <router-link to="privacyPolicy" class="string_privacyPolicy">{{ $t("string_privacyPolicy") }}</router-link> -->
+      <router-link to="userAgreement" class="string_userAgreement">{{ $t("string_userAgreement") }}</router-link>
+      <router-link to="privacyPolicy" class="string_privacyPolicy">{{ $t("string_privacyPolicy") }}</router-link>
       <div class="string_copyright">{{ $t("string_copyright") }}</div>
     </div>
   </div>

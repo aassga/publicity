@@ -7,23 +7,23 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    redirect: 'signUp'
+    redirect: 'Landing'
   },
   {
     path: '/landing',
     name: 'Landing',
     component: Landing,
   },
-  // {
-  //   path: '/userAgreement',
-  //   name: 'userAgreement',
-  //   component: Agreement
-  // },
-  // {
-  //   path: '/privacyPolicy',
-  //   name: 'privacyPolicy',
-  //   component: Privacy
-  // },
+  {
+    path: '/userAgreement',
+    name: 'userAgreement',
+    component: Agreement
+  },
+  {
+    path: '/privacyPolicy',
+    name: 'privacyPolicy',
+    component: Privacy
+  },
   {
     path: '/signUp',
     name: 'signUp',

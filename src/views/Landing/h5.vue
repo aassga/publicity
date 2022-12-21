@@ -20,19 +20,19 @@
     </div>
     <p class="string_desc">{{ $t("string_desc") }}</p>
     <div class="pad-air-style">
-      <!-- <a href="https://play.google.com/store/apps/details?id=com.py.hichat" target="_blank">
+      <a href="https://apps.apple.com/app/%E5%97%A8%E8%81%8A-hailiao/id1639310456" target="_blank">
         <div class="download-btn">
-          <img class="string_app_google_img" src="@/assets/icon/btn-googleplay.png" alt="">
+          <img class="string_app_google_img" src="@/assets/icon/btn-ios-black.png" alt="">
         </div>
-      </a> -->
+      </a>
       <a href="https://apk.hichat.info/download/HiChatCN_2022-05-05_v1.3.2-release.apk" target="_blank">
         <div class="download-btn">
-          <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="">
+          <img class="string_app_android_img" src="@/assets/icon/btn-android-black.png" alt="">
         </div>
       </a>
       <a class="hichat-browser" target="_blank" @click="goWebPage()">
         <div class="download-btn">
-          <img class="string_app_browser_img" src="@/assets/icon/btn-browser.png" alt="">
+          <img class="string_app_browser_img" src="@/assets/icon/btn-browser-black.png" alt="">
         </div>
       </a>
     </div>
@@ -100,27 +100,27 @@
 
     <div class="pad-air-style h5-bottom">
       <div class="wrap-h5-footer">
-        <!-- <a href="https://play.google.com/store/apps/details?id=com.py.hichat" target="_blank">
+        <a href="https://apps.apple.com/app/%E5%97%A8%E8%81%8A-hailiao/id1639310456" target="_blank">
           <div class="download-btn">
-            <img class="string_app_google_img" src="@/assets/icon/btn-googleplay.png" alt="">
+            <img class="string_app_google_img" src="@/assets/icon/btn-ios-black.png" alt="">
           </div>
-        </a> -->
+        </a>
         <a href="https://apk.hichat.info/download/Hailiao_2022-06-21_v1.4.0-release.apk" target="_blank">
           <div class="download-btn">
-            <img class="string_app_android_img" src="@/assets/icon/btn-android.png" alt="">
+            <img class="string_app_android_img" src="@/assets/icon/btn-android-black.png" alt="">
           </div>
         </a>
         <a class="hichat-browser" target="_blank" @click="goWebPage()">
           <div class="download-btn">
-            <img class="string_app_browser_img" src="@/assets/icon/btn-browser.png" alt="">
+            <img class="string_app_browser_img" src="@/assets/icon/btn-browser-black.png" alt="">
           </div>
         </a>
         <div class="footer-text">
           <img class="logo-footer" src="@/assets/brand-footer.png" alt=""><!-- icon -->
           <img class="logo-footer-text" src="@/assets/logotext.png" alt="">
         </div>
-        <!-- <router-link to="privacyPolicy" class="string_privacyPolicy">{{ $t("string_privacyPolicy") }}</router-link>
-        <router-link to="userAgreement" class="string_userAgreement">{{ $t("string_userAgreement") }}</router-link> -->
+        <router-link to="privacyPolicy" class="string_privacyPolicy">{{ $t("string_privacyPolicy") }}</router-link>
+        <router-link to="userAgreement" class="string_userAgreement">{{ $t("string_userAgreement") }}</router-link>
         <div class="string_copyright">{{ $t("string_copyright") }}</div>
         <div class="wrap-h5-footer-bg"></div>
       </div>
